@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <img src="/static/images/tlsnav.png" alt="驼铃电商导航" width="200" />
+  <img src="/static/images/TLS-logo.png" alt="驼铃电商导航" width="200" />
   
   [![Hugo](https://img.shields.io/badge/Hugo-0.128.0+-blue.svg)](https://gohugo.io/)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -15,6 +15,10 @@
 ## 📖 项目简介
 
 这是一个基于Hugo框架的电商工具导航网站，集合了各种电商相关的工具、平台和资源链接，方便电商从业者快速访问所需资源。网站名为"驼铃电商导航"，提供了丰富的电商运营工具和资源导航。
+
+## 📸 界面预览
+
+![主界面预览](./static/images/tlsnav.png)
 
 ## ✨ 项目特点
 
