@@ -155,16 +155,6 @@ TLS-Nav/
   taxonomy: "分类名称"
 ```
 
-### 示例
-
-```yaml
-- title: "淘宝"
-  logo: "/static/images/电商工具/淘宝.png"
-  url: "https://www.taobao.com"
-  description: "中国最大的C2C电商平台"
-  taxonomy: "电商工具"
-```
-
 
 ## 📄 许可证
 
