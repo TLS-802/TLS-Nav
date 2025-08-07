@@ -1,0 +1,93 @@
+/* 标签式二级菜单样式 */
+.tab-container {
+  margin-top: 15px;
+}
+
+.tab-menu {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e4ecf3;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+.tab-menu .tab-item {
+  display: inline-block;
+  padding: 8px 15px;
+  margin-right: 5px;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+  background-color: #f5f5f5;
+  border: 1px solid #e4ecf3;
+  border-bottom: none;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.tab-menu .tab-item:hover {
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.tab-menu .tab-item.active {
+  color: #fff;
+  background-color: #3d4044;
+  border-color: #3d4044;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content .row {
+  margin-top: 15px;
+}
+
+/* 暗色模式下的样式 */
+.black .tab-menu {
+  border-bottom-color: #3d4044;
+}
+
+.black .tab-menu .tab-item {
+  color: #bbb;
+  background-color: #2c2e2f;
+  border-color: #3d4044;
+}
+
+.black .tab-menu .tab-item:hover {
+  color: #ddd;
+  background-color: #26282a;
+}
+
+.black .tab-menu .tab-item.active {
+  color: #fff;
+  background-color: #3d4044;
+  border-color: #3d4044;
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 767px) {
+  .tab-menu {
+    padding-bottom: 10px;
+  }
+  
+  .tab-menu .tab-item {
+    padding: 6px 12px;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+}
+
+/* 分类之间的间距 */
+.sites-list h4 + .tab-container,
+.sites-list h4 + .row {
+  margin-bottom: 15px;
+} 

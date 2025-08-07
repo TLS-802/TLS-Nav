@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{{ .Site.Title }}</title>
+<meta name="theme-color" content="#2C2E2F" />
+<meta name="keywords" content="{{ .Site.Params.keywords }}">
+<meta name="description" content="{{ .Site.Params.Description }}">
+<!-- Open Graph 元数据，用于社交媒体分享 -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:site_name" content="">
+<!-- 网站图标和应用图标 -->
+<link rel="shortcut icon" href="./images/TLS-logo.png">
+<link rel="apple-touch-icon" href="./images/TLS-logo.png">
+<!-- CSS 样式文件引入 -->
+<link rel='stylesheet' id='font-awesome-css'  href='./css/font-awesome.min.css?ver=6.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='./css/bootstrap.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='nav-css'  href='./css/nav.css?ver=2.0.0' type='text/css' media='all' />
+<!-- 添加标签式菜单CSS -->
+<link rel='stylesheet' id='tabs-css'  href='./css/tabs.css?ver=1.0.0' type='text/css' media='all' />
+<!-- jQuery 库引入 -->
+<script type='text/javascript' src='./js/jquery-1.11.1.min.js'></script>
+<style>
+/* 为侧边栏二级菜单添加样式 */
+.sidebar-menu .main-menu > li > ul {
+  display: none;
+  padding: 8px 0;
+}
+
+.sidebar-menu .main-menu > li.expanded > ul {
+  display: block;
+}
+
+.sidebar-menu .main-menu > li > ul > li > a {
+  padding-left: 40px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  border-bottom: none !important;
+}
+
+.sidebar-menu .main-menu > li > ul > li.active > a {
+  color: #fff;
+}
+
+.sidebar-menu .main-menu > li > ul > li > a:hover {
+  color: #fff;
+}
+</style>
+</head>
+<!-- 根据暗黑模式设置添加不同的body类 -->
+<body class="page-body {{ if .Site.Params.darkmode.enable }}black{{ else }}white{{ end }}">
+    <div class="page-container">
+        <!-- 侧边栏菜单 -->
+        <div class="sidebar-menu toggle-others fixed">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <!-- 网站logo -->
+                    <div class="logo">
+                        <a href="./" class="logo-expanded" >
+                            <img src="./images/TLS-logo.png" height="40" alt="" />
+                            &nbsp&nbsp{{ .Site.Title }}
+                        </a>
+                        <a href="./" class="logo-collapsed">
+                            <img src="./images/TLS-logo.png" height="40" alt="">
+                        </a>
+                    </div>
+                    <!-- 移动端菜单切换按钮 -->
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a href="#" data-toggle="mobile-menu">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </header>
+                <!-- 主菜单列表 -->
+                <ul id="main-menu" class="main-menu">
+                    {{ range .Site.Data.webstack }}
+                    {{ if .tabs }}
+                        {{ $taxonomy := .taxonomy }}
+                        <li>
+                            <a href="#{{ md5 .taxonomy }}" class="smooth">
+                               <i class="fa {{ .icon }} fa-fw"></i>
+                               <span class="title">{{ .taxonomy }}</span>
+                            </a>
+                            <ul>
+                                {{ range $index, $tab := .tabs }}    
+                                <li>
+                                    <a href="#{{ md5 $taxonomy }}-tab-{{ $index }}" class="smooth">{{ $tab.name }}</a>
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </li>
+                    {{ else }}
+                        <li>
+                            <a href="#{{ md5 .taxonomy }}" class="smooth">
+                               <i class="fa {{ .icon }} fa-fw"></i>
+                               <span class="title">{{ .taxonomy }}</span>
+                            </a>
+                        </li>
+                    {{ end }}                 
+                    {{ end }}
+                </ul>
+                
+
+            </div>
+        </div>
+        <!-- 主内容区域 -->
+        <div class="main-content">
+<!-- 顶部导航栏 -->
+<nav class="navbar user-info-navbar" role="navigation">
+    <div class="navbar-content">
+        <ul class="user-info-menu left-links list-inline list-unstyled">
+            <li class="hidden-xs">
+                <a href="#" data-toggle="sidebar" ><i class="fa fa-bars"></i></a>
+            </li>
+
+      </ul>
+        <!-- GitHub 仓库链接，根据配置显示 -->
+        {{ if .Site.Params.Github.enable }}
+        <ul class="user-info-menu right-links list-inline list-unstyled">
+            <li class="hidden-sm hidden-xs">
+                <a href="{{ .Site.Params.Github.url }}" target="_blank" title="Git Repo"><i class="fa fa-code"></i></a>
+            </li>
+        </ul>
+        {{ end }}
+    </div>
+</nav>
+<!-- 搜索模板引入 -->
+{{ template "search.html" . }}
+<!-- 网站列表展示区域 -->
+<div class="sites-list" style="margin-bottom: 2.5rem;">
+{{ range .Site.Data.webstack }}
+    <!-- {{ .taxonomy }} -->
+    <h4 class="text-gray" style="display: inline-block; margin-bottom: 15px;" id="{{ md5 .taxonomy }}"><i class="fa {{ .icon }}" style="margin-right: 27px;"></i>{{ .taxonomy }}</h4>
+    
+    {{ if .tabs }}
+    <!-- 有标签式二级菜单的分类 -->
+    <div class="tab-container">
+        <!-- 标签菜单 -->
+        <div class="tab-menu">
+            {{ $taxonomy := .taxonomy }}
+            {{ range $index, $tab := .tabs }}
+            <span class="tab-item" data-tab="{{ $index }}" id="{{ md5 $taxonomy }}-tab-{{ $index }}">{{ $tab.name }}</span>
+            {{ end }}
+        </div>
+        
+        <!-- 标签内容 -->
+        {{ range $index, $tab := .tabs }}
+        <div class="tab-content" data-tab="{{ $index }}">
+            <div class="row">
+            {{ range $tab.links }}
+                {{ if .qrcode }}
+                <!-- 带二维码的网站卡片 -->
+                <div class="xe-card col-xs-6 col-sm-4 col-md-3 qrcode geticon">
+                    <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='{{ .qrcode }}' width='128'>">
+                        <div class="xe-comment-entry">
+                            <div class="xe-user-img">
+                                <img class="img-circle lazy" src="./images/TLS-logo.png" data-src="{{ .logo }}" onerror="javascript:this.src='./images/TLS-logo.png'" width="40">
+                            </div>
+                            <div class="xe-comment">
+                                <div class="xe-user-name overflowClip_1">
+                                    <strong>{{ .title }}</strong>
+                                </div>
+                                <p class="overflowClip_2">{{ .description }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{ else }}
+                <!-- 普通网站卡片 -->
+                <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
+                    <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" 
+                    title="{{ .description }} {{ .url }}">
+                        <div class="xe-comment-entry">
+                            <div class="xe-user-img">
+                                <img class="img-circle lazy" src="./images/TLS-logo.png" data-src="{{ .logo }}" onerror="javascript:this.src='./images/TLS-logo.png'" width="40">
+                            </div>
+                            <div class="xe-comment">
+                                <div class="xe-user-name overflowClip_1">
+                                    <strong>{{ .title }}</strong>
+                                </div>
+                                <p class="overflowClip_2">{{ .description }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+            {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    {{ else }}
+    <!-- 无标签式二级菜单的普通分类 -->
+    <div class="row" style="margin-top: 15px;">
+    {{ range .links }}
+        {{ if .qrcode }}
+        <!-- 带二维码的网站卡片 -->
+        <div class="xe-card col-xs-6 col-sm-4 col-md-3 qrcode geticon">
+            <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='{{ .qrcode }}' width='128'>">
+                <div class="xe-comment-entry">
+                    <div class="xe-user-img">
+                        <img class="img-circle lazy" src="./images/TLS-logo.png" data-src="{{ .logo }}" onerror="javascript:this.src='./images/TLS-logo.png'" width="40">
+                    </div>
+                    <div class="xe-comment">
+                        <div class="xe-user-name overflowClip_1">
+                            <strong>{{ .title }}</strong>
+                        </div>
+                        <p class="overflowClip_2">{{ .description }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{ else }}
+        <!-- 普通网站卡片 -->
+        <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
+            <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" 
+            title="{{ .description }} {{ .url }}">
+                <div class="xe-comment-entry">
+                    <div class="xe-user-img">
+                        <img class="img-circle lazy" src="./images/TLS-logo.png" data-src="{{ .logo }}" onerror="javascript:this.src='./images/TLS-logo.png'" width="40">
+                    </div>
+                    <div class="xe-comment">
+                        <div class="xe-user-name overflowClip_1">
+                            <strong>{{ .title }}</strong>
+                        </div>
+                        <p class="overflowClip_2">{{ .description }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{ end }}
+    {{ end }}
+    </div>
+    {{ end }}
+    
+    <!-- 友情链接 -->
+    {{ if .friend }}
+    <div class="friendlink" style="margin-top: 15px; margin-bottom: 15px;">
+        <div class="panel">
+        {{ range .friend }}            
+            <!-- <h4 class="text-gray mb-4"> -->
+            <!-- <i class="fa fa-bookmark" id="friendlink" style="margin-right:10px"></i>友情链接</h4> -->                
+            <a href="{{ .url }}" rel="noopener" title="{{ .description }}" target="_blank">{{ .title }}</a>
+        {{ end }}
+        </div> 
+    </div>
+    {{ end }}
+    <!-- END 友情链接    -->
+    <br />
+    <!--END {{ .taxonomy }} -->
+{{ end }}
+</div>
+            <!-- 页脚 -->
+            <footer class="main-footer sticky footer-type-1">
+                <!-- 页脚按钮组 -->
+                <div class="foot-button">
+                    <a href="#" rel="go-top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                    <a href="javascript:" id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="javascript:" class="bright-dark" title="日/夜">
+                        <i class="fa {{ if .Site.Params.darkmode.enable }}fa-sun{{ else }}fa-moon{{ end }}"></i>
+                    </a>                  
+                </div>
+                <div class="footer-inner">
+                    <!-- 版权信息 -->
+                    <div class="footer-text">
+                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong>&nbsp;&nbsp;</a>              
+                    </div>
+                    <!-- 主题信息 -->
+                    <div class="footer-text">                       
+                        Design by <a href="https://github.com/TLS-802/TLS-Nav" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">Webstack</a>&nbsp;&middot;&nbsp;Themes by <a href="https://github.com/TLS-802/TLS-Nav" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">hugo-webstack</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- 搜索框覆盖层 -->
+    <div id="overlay" style="display:none">  
+    <div id="search-box" >
+        <a href="javascript:" id="close-button" title="点击周围任意地方也可以关闭。"><i class="fa far  fa-circle-xmark" ></i></a>
+        <form onsubmit="return false;">
+            <input type="text" id="search-input" placeholder="输入关键词{{ if .Site.Params.pinyin.enable }}、拼音或拼音首字母{{ end }}" autocomplete="off">
+            <i class="search-icon fa fa-search" aria-hidden="true"></i> 
+        </form>
+        <ul id="search-results">
+            <span> 搜索本页内容</span>
+        </ul>
+        <p style="font-size:11px">键盘：Ctrl+F 开关，<strong>↑</strong> 和 <strong>↓</strong> 选择，Enter 访问</p>
+    </div>
+    <script>var rootPath = './'</script>
+    </div id="overlay"> 
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 黑暗和明亮模式切换功能
+        $('footer.main-footer .foot-button .bright-dark').click(function(){   
+            var currentIcon = $(this).find('i').attr('class'); 
+            if (currentIcon.includes('fa-moon')) {
+                $(this).find('i').removeClass('fa-moon').addClass('fa-sun');
+                $('body').removeClass('white').addClass('black');
+            }else if (currentIcon.includes('fa-sun')) { 
+                    $(this).find('i').removeClass('fa-sun').addClass('fa-moon');
+                    $('body').removeClass('black').addClass('white');
+            }        
+        });
+        // 黑暗和明亮模式 END
+        
+        // 利用iowen API 获取网址icon
+        $(".geticon").each(function(){
+            var url = $(this).find('a').attr('href');
+            var apiUrl="https://api.iowen.cn/favicon/"+url.replace(/^https?:\/\//, '').replace(/\/.*$/, '')+".png"
+            if ($(this).find('img').attr('data-src').length === 0) {
+                $(this).find('img').attr('data-src', apiUrl);
+            }
+        })
+        // END 利用iowen API 获取网址icon
+        
+        // 平滑滚动设置
+        $("a.smooth").click(function(e) {
+            e.preventDefault();
+            $("#main-menu li").each(function() {
+                $(this).removeClass("active");
+            });
+            $(this).parent("li").addClass("active");
+            var href = $(this).attr("href");
+            var pos = $(href).position().top - 100;
+            
+            // 检查是否为二级菜单标签
+            if (href.indexOf('-tab-') > -1) {
+                // 立即激活对应标签
+                $(href).click();
+                
+                // 激活父菜单项
+                $(this).parents('li.has-sub').addClass('expanded active');
+            }
+            
+            $("html,body").animate({
+                scrollTop: pos
+            }, 200); // 减少动画时间，提高响应速度
+        });
+        // 平滑滚动设置 END
+        
+        // 初始化二级菜单
+        function initSubMenus() {
+            // 获取当前URL的哈希值
+            var hash = window.location.hash;
+            
+            // 如果哈希值包含-tab-，表示是二级菜单项
+            if(hash && hash.indexOf('-tab-') > -1) {
+                // 找到对应的菜单项
+                var $menuItem = $('a[href="' + hash + '"]');
+                if($menuItem.length) {
+                    // 展开父菜单
+                    $menuItem.parents('li.has-sub').addClass('expanded active');
+                    // 激活当前菜单项
+                    $menuItem.parent('li').addClass('active');
+                }
+            }
+        }
+        
+        // 页面加载时初始化二级菜单
+        initSubMenus();
+    });
+</script>
+<!-- 引入标签式菜单JS -->
+<script type='text/javascript' src='./js/tabs.js'></script>
+<!-- 引入其他JS -->
+<script type='text/javascript' src='./js/bootstrap.min.js'></script>
+<script type='text/javascript' src='./js/TweenMax.min.js'></script>
+<script type='text/javascript' src='./js/lazyload.min.js'></script>
+<script type='text/javascript' src='./js/nav.js'></script>
+<script type='text/javascript' src='./js/local-search.js'></script>
+{{ if .Site.Params.pinyin.enable }}
+<script type='text/javascript' src='./js/pinyin-pro-3.19.0.min.js'></script>
+{{ end }}
+
+<!-- 在body结束标签前添加内联脚本 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 定义关闭移动菜单的函数
+    window.closeMobileMenu = function() {
+        // 原生JavaScript方式
+        var mainMenu = document.getElementById('main-menu');
+        var sidebarProfile = document.querySelector('.sidebar-user-info');
+        
+        if(mainMenu) {
+            mainMenu.classList.remove('mobile-is-visible');
+        }
+        if(sidebarProfile) {
+            sidebarProfile.classList.remove('mobile-is-visible');
+        }
+        
+        // 关闭背景遮罩
+        var backdrop = document.querySelector('.mobile-menu-backdrop');
+        if(backdrop) backdrop.classList.remove('visible');
+        
+        // jQuery方式 - 确保与原有代码兼容
+        if(typeof jQuery !== 'undefined') {
+            jQuery(function($) {
+                // 使用与原有触发器相同的选择器
+                if(typeof window.public_vars !== 'undefined') {
+                    if(window.public_vars.$mainMenu) {
+                        window.public_vars.$mainMenu.removeClass('mobile-is-visible');
+                    }
+                    if(window.public_vars.$sidebarProfile) {
+                        window.public_vars.$sidebarProfile.removeClass('mobile-is-visible');
+                    }
+                } else {
+                    // 备用方式
+                    $('#main-menu, .sidebar-user-info').removeClass('mobile-is-visible');
+                }
+                
+                // 调用滚动条销毁函数
+                if(typeof ps_destroy === 'function') {
+                    ps_destroy();
+                } else if(window.ps_destroy) {
+                    window.ps_destroy();
+                } else if(typeof window.public_vars !== 'undefined' && window.public_vars.$sidebarMenu) {
+                    window.public_vars.$sidebarMenu.find('.sidebar-menu-inner').perfectScrollbar('destroy');
+                }
+            });
+        }
+    };
+    
+    // 获取所有侧边栏内的菜单链接（不包括汉堡菜单按钮）
+    var menuLinks = document.querySelectorAll('.sidebar-menu .main-menu a');
+    
+    // 为每个菜单链接添加点击事件处理
+    menuLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            // 检查是否是移动视图 (小于768px)
+            if(window.innerWidth < 768) {
+                var href = this.getAttribute('href');
+                
+                // 排除汉堡菜单按钮和切换类按钮
+                if(this.getAttribute('data-toggle') === 'mobile-menu' || 
+                   this.getAttribute('data-toggle') === 'sidebar') {
+                    return; // 不处理汉堡菜单按钮
+                }
+                
+                // 检查是否是二级菜单的父菜单项
+                var parentLi = this.parentNode;
+                if(parentLi && (parentLi.classList.contains('has-sub') || 
+                                parentLi.classList.contains('expanded') || 
+                                parentLi.querySelector('ul'))) {
+                    // 如果链接没有href或href为#或是控制子菜单显示的链接
+                    if(!href || href === '#' || this.classList.contains('submenu-toggle')) {
+                        return; // 不关闭侧边栏
+                    }
+                    
+                    // 检查是否有子菜单展开指示符
+                    var hasExpandIndicator = this.querySelector('.fa-caret-down') || 
+                                             this.querySelector('.fa-angle-down') ||
+                                             this.querySelector('.fa-chevron-down');
+                    if(hasExpandIndicator) {
+                        return; // 不关闭侧边栏
+                    }
+                }
+                
+                // 如果是有效链接且不是空链接或JavaScript链接
+                if(href && href !== '#' && !href.startsWith('javascript:')) {
+                    // 使用setTimeout确保在导航之前关闭菜单
+                    setTimeout(function() {
+                        window.closeMobileMenu();
+                    }, 50);
+                }
+            }
+        });
+    });
+    
+    // 修正移动端点击事件处理
+    function fixMobileMenuBehavior() {
+        // 添加全局事件处理器
+        document.body.addEventListener('click', function(e) {
+            // 检查是否是移动视图
+            if(window.innerWidth < 768) {
+                // 检查点击的元素或其父元素是否是汉堡菜单按钮
+                var target = e.target;
+                var isHamburgerButton = false;
+                
+                while(target && target !== document.body) {
+                    if(target.getAttribute && 
+                       (target.getAttribute('data-toggle') === 'mobile-menu' || 
+                        target.getAttribute('data-toggle') === 'sidebar')) {
+                        isHamburgerButton = true;
+                        break;
+                    }
+                    target = target.parentNode;
+                }
+                
+                // 如果是汉堡菜单按钮，不执行关闭操作
+                if(isHamburgerButton) {
+                    return;
+                }
+                
+                // 检查点击的元素是否在侧边栏内
+                target = e.target;
+                var isInsideSidebar = false;
+                
+                while(target && target !== document.body) {
+                    if(target.classList && target.classList.contains('sidebar-menu')) {
+                        isInsideSidebar = true;
+                        break;
+                    }
+                    target = target.parentNode;
+                }
+                
+                // 如果点击的是侧边栏内的链接元素
+                if(isInsideSidebar && e.target.tagName === 'A') {
+                    // 获取链接的href属性
+                    var href = e.target.getAttribute('href');
+                    
+                    // 排除汉堡菜单按钮和切换类按钮
+                    if(e.target.getAttribute('data-toggle') === 'mobile-menu' || 
+                       e.target.getAttribute('data-toggle') === 'sidebar') {
+                        return; // 不处理汉堡菜单按钮
+                    }
+                    
+                    // 检查是否是二级菜单的父菜单项
+                    var parentLi = e.target.parentNode;
+                    if(parentLi && (parentLi.classList.contains('has-sub') || 
+                                    parentLi.classList.contains('expanded') || 
+                                    parentLi.querySelector('ul'))) {
+                        // 如果链接没有href或href为#或是控制子菜单显示的链接
+                        if(!href || href === '#' || e.target.classList.contains('submenu-toggle')) {
+                            return; // 不关闭侧边栏
+                        }
+                        
+                        // 检查是否有子菜单展开指示符
+                        var hasExpandIndicator = e.target.querySelector('.fa-caret-down') || 
+                                                 e.target.querySelector('.fa-angle-down') ||
+                                                 e.target.querySelector('.fa-chevron-down');
+                        if(hasExpandIndicator) {
+                            return; // 不关闭侧边栏
+                        }
+                    }
+                    
+                    // 如果是有效链接且不是空链接或JavaScript链接
+                    if(href && href !== '#' && !href.startsWith('javascript:')) {
+                        // 关闭移动菜单
+                        setTimeout(function() {
+                            window.closeMobileMenu();
+                        }, 50);
+                    }
+                }
+            }
+        }, true); // 使用捕获阶段
+    }
+    
+    // 执行修复函数
+    fixMobileMenuBehavior();
+    
+    // 添加主内容区域点击事件
+    var mainContent = document.querySelector('.main-content');
+    if(mainContent) {
+        mainContent.addEventListener('click', function(e) {
+            // 只在移动视图下处理
+            if(window.innerWidth < 768) {
+                // 检查是否点击的是主内容区域
+                var mainMenu = document.getElementById('main-menu');
+                if(mainMenu && mainMenu.classList.contains('mobile-is-visible')) {
+                    window.closeMobileMenu();
+                }
+            }
+        });
+    }
+    
+    // 监听屏幕尺寸变化
+    window.addEventListener('resize', function() {
+        // 如果不是移动视图，确保侧边栏正常显示
+        if(window.innerWidth >= 768) {
+            var sidebar = document.querySelector('.sidebar-menu');
+            if(sidebar) {
+                sidebar.style.transform = '';
+                sidebar.style.transition = '';
+            }
+        }
+        // 移除自动关闭侧边栏的代码，让用户手动控制
+    });
+});
+</script>
+
+</body>
+</html>

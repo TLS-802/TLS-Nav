@@ -1,0 +1,84 @@
+/* 社交媒体链接样式 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px !important;
+    margin-bottom: 2px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* 社交媒体图标 */
+.social-links img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: all 0.3s ease;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* 删除平台特定背景色 */
+/* 仅保留悬停动画效果 */
+.bounce-animation {
+    animation: none;
+}
+
+.bounce-animation:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* 页脚样式 */
+footer {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin-top: 0.75rem;
+    color: #666;
+}
+
+/* 社交图标样式调整 */
+footer .social-links a {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+footer .social-links img {
+    width: 24px;
+    height: 24px;
+} 

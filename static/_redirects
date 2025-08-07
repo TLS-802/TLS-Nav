@@ -1,0 +1,10 @@
+# 强制HTTPS
+http://:project.pages.dev/* https://:project.pages.dev/:splat 301!
+
+# 处理可能的路径问题，确保带斜杠和不带斜杠的URL都能正常工作
+/index.html / 301!
+/index / 301!
+
+# 确保子页面正确加载
+/sub1 /sub1/ 301!
+/sub2 /sub2/ 301! 

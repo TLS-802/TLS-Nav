@@ -1,0 +1,481 @@
+- taxonomy: 常用工具
+  icon: fa-star
+  links:
+  - title: 直播间录制工具
+    logo: images/TLS-logo.png
+    url: https://fbjvryq00y.feishu.cn/drive/folder/Y0BTfqMWoleXphdT1cNci3fDnUg
+    description: 批量录制、自动转码等
+  - title: AuTox视频搬运
+    logo: images/TLS-logo.png
+    url: https://fbjvryq00y.feishu.cn/drive/folder/LeM2f5tuZlbF3GdeKV9cYqGlnke
+    description: 视频一键搬运发布
+
+- taxonomy: 电商工具
+  icon: fa-shopping-cart
+  list:
+  - term: 电商后台
+  - term: 电商插件
+  - term: 电商erp
+  - term: 跨境平台
+  - term: 企业查询
+  - term: 知识产权
+  tabs:
+  - name: 电商后台
+    links:
+    - title: 淘宝后台
+      logo: images/电商工具/淘宝.png
+      url: https://seller.taobao.com
+      description: 淘宝卖家中心后台管理系统
+    - title: 天猫后台
+      logo: images/电商工具/天猫.jpeg
+      url: https://myseller.tmall.com
+      description: 天猫商家后台管理系统
+    - title: 京东后台
+      logo: images/电商工具/京东.png
+      url: https://seller.jd.com
+      description: 京东商家后台管理系统
+    - title: 抖音小店后台
+      logo: images/电商工具/抖音.jpg
+      url: https://fxg.jinritemai.com
+      description: 抖音小店后台
+    - title: 拼多多后台
+      logo: images/电商工具/拼多多.jpg
+      url: https://mms.pinduoduo.com
+      description: 拼多多商家后台管理系统
+    - title: 快手商家后台
+      logo: images/电商工具/快手.jpg
+      url: https://s.kwaixiaodian.com
+      description: 快手小店商家后台管理系统
+    - title: 亚马逊后台
+      logo: images/电商工具/亚马逊.png
+      url: https://sellercentral.amazon.com
+      description: 亚马逊卖家中心后台管理系统
+    - title: 1688后台
+      logo: images/电商工具/1688.png
+      url: https://work.1688.com
+      description: 1688商家工作台后台管理系统
+    - title: 速卖通后台
+      logo: images/电商工具/速卖通.png
+      url: https://seller.aliexpress.com
+      description: 速卖通卖家后台管理系统
+    - title: 小红书商家后台
+      logo: images/电商工具/小红书.jpg
+      url: https://ark.xiaohongshu.com
+      description: 小红书商家后台管理系统
+    - title: 视频号商家后台
+      logo: images/电商工具/视频号.jpg
+      url: https://channels.weixin.qq.com
+      description: 微信视频号商家后台管理系统
+    - title: eBay后台
+      logo: images/电商工具/eBay.png
+      url: https://www.ebay.com/sh/ovw
+      description: eBay卖家中心后台管理系统
+    - title: Shopee后台
+      logo: images/电商工具/Shopee.png
+      url: https://seller.shopee.cn
+      description: Shopee卖家中心后台管理系统
+    - title: 有赞后台
+      logo: images/电商工具/有赞.png
+      url: https://www.youzan.com
+      description: 有赞商家后台管理系统
+    - title: TikTok后台
+      logo: images/电商工具/抖音.jpg
+      url: https://ads.tiktok.com
+      description: TikTok商业广告后台管理系统
+    - title: TEMU后台
+      logo: images/电商工具/TEMU.png
+      url: https://seller.kuajingmaihuo.com/login
+      description: TEMU卖家中心后台管理系统
+    - title: Wish后台
+      logo: images/电商工具/Wish.png
+      url: https://merchant.wish.com
+      description: Wish商家后台管理系统
+  - name: 电商插件
+    links:
+    - title: 阿明查查
+      logo: images/电商工具/阿明查查.png
+      url: https://www.amingchacha.com
+      description: 阿明工具，让数据会说话；生意参谋指数一键转化
+    - title: 店透视
+      logo: images/电商工具/店透视.png
+      url: https://diantoushi.com
+      description: 店透视插件 - 在线淘宝店铺数据分析
+    - title: 小旺神插件
+      logo: images/电商工具/小旺神插件.png
+      url: https://xiaowangshen.com
+      description: 小旺神为您提供新版生意参谋指数一键还原
+    - title: 癞蛤蟆工具箱
+      logo: images/电商工具/癞蛤蟆工具箱.png
+      url: http://www.91laihama.com/Tool/Plug
+      description: 癞蛤蟆电商工具箱，是一款能够帮助卖家赚钱的软件
+    - title: 店查查
+      logo: images/电商工具/店查查.png
+      url: https://www.dianchacha.com/chajian
+      description: 店查查是提供淘宝数据统计、店铺关注、宝贝价格关注
+    - title: 幕思城将军令
+      logo: images/电商工具/幕思城将军令.png
+      url: https://tool.musicheng.com/chajian
+      description: 幕思城将军令插件是淘宝天猫卖家必备的数据分析工具
+    - title: 哈士奇电商插件
+      logo: images/电商工具/哈士奇电商插件.png
+      url: https://hsq.dangxun.com
+      description: 哈士奇电商插件官网，多功能免费
+    - title: 至尊宝找货助手
+      logo: images/电商工具/至尊宝找货助手.png
+      url: https://zzb.3351r.com/update/index.html
+      description: 至尊宝免费提供一键多平台搜图/搜词选品，宝贝详情
+    - title: 旺参谋插件
+      logo: images/电商工具/旺参谋插件.png
+      url: https://wangcanmou.com
+      description: 旺参谋为您提供新版1688生意参谋指数一键还原
+    - title: 洞察魔镜
+      logo: images/电商工具/电商魔镜.png
+      url: http://www.moojing.com/extension
+      description: 实时观察同行竞店数据，免费魔镜浏览器插件
+    - title: AliPrice卖家助手
+      logo: images/电商工具/aliexpress.png
+      url: https://www.aliprice.com
+      description: AliPrice是支持淘宝、1688、速卖通
+    - title: Eagle
+      logo: images/电商工具/Eagle.png
+      url: https://cn.eagle.cool/extensions
+      description: Eagle 可以轻松管理大量图片、视频、音频素材
+    - title: 实选抖音选品检测工具
+      logo: images/电商工具/实选抖音选品检测工具.png
+      url: https://plugindy.shixuan.com
+      description: 一款高效的抖音选品检测工具，测高佣、测低价
+    - title: 多兔淘客插件
+      logo: images/电商工具/多兔淘客插件.png
+      url: https://duotu.pro/plugs
+      description: 多兔淘客插件，一个实用方便数据全的淘客插件，商品信息
+    - title: 店雷达
+      logo: images/电商工具/店雷达.png
+      url: https://www.dianleida.net
+      description: 店雷达1688选品运营插件
+    - title: 京品库插件
+      logo: images/电商工具/京品库插件.png
+      url: https://www.jingpinku.com/page/plug.do
+      description: 京品库插件，可查看商品的团长信息、月推广销量
+    - title: 淘客易插件
+      logo: images/电商工具/淘客易插件.png
+      url: http://cj.tky.com
+      description: 淘客易插件是淘宝易(www.tky.com)出品
+    - title: Fatkun图片下载
+      logo: images/电商工具/Fatkun图片下载.webp
+      url: https://www.fatkun.net/zh-CN/download
+      description: Fatkun图片下载插件
+    - title: 猫爪
+      logo: images/电商工具/猫爪.jpg
+      url: https://cat-catch.bmmmd.com
+      description: 网页视频嗅探与下载插件
+    - title: 社媒助手
+      logo: images/电商工具/社媒助手.png
+      url: https://smc.iszhouhua.com
+      description: 多平台数据采集插件
+    - title: 达连
+      logo: images/电商工具/达连.png
+      url: https://tool.kollink.net
+      description: TikTok达人邀约插件
+    - title: 像素蛋糕
+      logo: images/电商工具/像素蛋糕.png
+      url: https://www.pixcakeai.com/
+      description: 像素蛋糕是一款简单易用的AI修图工具，只需要拖入图片
+    - title: 零泉素材管理
+      logo: images/电商工具/零泉素材管理.png
+      url: https://lingquan.cool/extension
+      description: 零泉可以轻松和整理图片、视频等素材
+    - title: AnyRec放大
+      logo: images/电商工具/AnyRec放大.png
+      url: https://www.anyrec.io/zh/image-upscaler/
+      description: AnyRec offers AI-powered
+    links:
+    - title: 千牛
+      logo: images/电商工具/千牛.jpg
+      url: https://ss.taobao.com
+      description: 淘宝商家客服软件
+    - title: 飞鸽
+      logo: images/电商工具/飞鸽.png
+      url: https://ss.taobao.com
+      description: 抖音商家客服软件
+    - title: 京麦
+      logo: images/电商工具/京麦.jpg
+      url: https://ss.taobao.com
+      description: 京东商家客服软件
+    - title: 快语
+      logo: images/电商工具/快语.jpg
+      url: https://ss.taobao.com
+      description: 快手商家客服软件
+    - title: 千帆
+      logo: images/电商工具/千帆.jpg
+      url: https://ss.taobao.com
+      description: 小红书商家客服软件
+    - title: 视频号客服
+      logo: images/电商工具/视频号.jpg
+      url: https://store.weixin.qq.com/shop/kf
+      description: 视频号商家客服端
+    - title: 客服宝
+      logo: images/电商工具/客服宝.ico
+      url: https://www.kefubao.com
+      description: 客服宝是一款跨平台快捷回复工具，让客服少打字回复快
+    - title: 客聊宝
+      logo: images/电商工具/客聊宝.ico
+      url: http://www.keliaobao.com
+      description: 客聊宝是目前多款聊天助手里较为强大,比较专业的快捷回
+    - title: 极速客服
+      logo: images/电商工具/极速客服.ico
+      url: https://kf.hellomadou.com
+      description: 客服必备快捷聊天助手，提高回复效率，节省打字时间
+    - title: 小抖商家助手
+      logo: images/电商工具/小抖商家助手.png
+      url: https://xd.fandi.vip
+      description: 专业的抖店运营必备营销软件，可以帮助商家统一管理抖音小店
+    - title: 小迪客服助手
+      logo: images/电商工具/小迪客服助手.ico
+      url: http://xdkefu.fandi.vip
+      description: 支持绑定抖店,淘宝,天猫店铺，不限制电脑使用，让你不再为回复率考核烦恼~
+    - title: 新榜小豆芽
+      logo: images/电商工具/新榜小豆芽.png
+      url: https://d.newrank.cn
+      description: 新榜旗下跨平台多账号自媒体管理工具，支持多账号管理
+    - title: 营商保
+      logo: images/电商工具/营商保.png
+      url: https://ss.taobao.com
+      description: 从此刻起，对恶意买家说不！
+    - title: 反恶联盟
+      logo: images/电商工具/反恶联盟.png
+      url: http://www.felmvip.com
+      description: 反恶联盟(www.felmvip.com)是一个开放
+    - title: 举报职业投诉人
+      logo: images/电商工具/举报职业投诉人.gif
+      url: https://seller110.taobao.com/#
+      description: 打击恶意行为，遏制职业举报！平台通过风控维度
+  - name: 电商erp
+    links:
+    - title: 聚水潭ERP
+      logo: images/电商工具/聚水潭.ico
+      url: https://www.jushuitan.com
+      description: 为跨境电商提供全流程管理服务
+    - title: 旺店通ERP
+      logo: images/电商工具/旺店通.png
+      url: https://www.wangdian.cn/erp.html
+      description: 为跨境电商提供全流程管理服务
+    - title: 领星ERP
+      logo: images/电商工具/领星.png
+      url: https://www.lingxing.com
+      description: 5000单以下全功能免费使用，注册后联系人工领取福利
+    - title: 马帮ERP
+      logo: images/电商工具/马帮.png
+      url: https://www.mabangerp.com
+      description: 提供全流程跨境电商ERP管理软件解决方案
+    - title: 店小秘ERP
+      logo: images/电商工具/店小秘.png
+      url: https://www.dianxiaomi.com
+      description: 为全球电商卖家提供SaaS系统服务
+    - title: 易仓ERP
+      logo: images/电商工具/易仓.png
+      url: https://www.eccang.com
+      description: 跨境行业全生态链软件服务供应商
+    - title: 万里牛
+      logo: images/电商工具/万里牛.png
+      url: http://www.wanliniu.com
+      description: 注册即免费赠送3000单
+    - title: 金蝶
+      logo: images/电商工具/金蝶.png
+      url: https://www.kingdee.com/EBCzt
+      description: EBC（企业业务能力）包含五大能力： 链接客户、链接伙伴、链接员工、链接万物、数据驱动
+    - title: 妙手ERP
+      logo: images/电商工具/妙手ERP.png
+      url: https://erp.91miaoshou.com
+      description: 新用户免费试用7天
+    - title: 全卖通
+      logo: images/电商工具/全卖通.jpeg
+      url: https://www.quanmaitong.com
+      description: 亚马逊店铺运营系统
+    - title: 亿看ERP
+      logo: images/电商工具/亿看ERP.png
+      url: https://www.ecount.cn
+      description: 包括库存、采购、销售、生产、财务、会计、人事、工资、协同办公等公司需要的多种功能 无附加开发费用，您只需要选择对应的功能使用即可。 即使企业环境发生变化或职员增加，也能按照公司需求进行设置，符合公司使用。
+    - title: 彬匠ERP
+      logo: images/电商工具/彬匠ERP.png
+      url: https://www.binjiang-tech.com
+      description: 致力于成为跨境出海企业最信赖的定制化解决方案服务商，聚焦于为规模性客户赋能其全球业务，产品定位于全场景、一站式、业财一体化的解决方案！
+    - title: GreatBoss ERP
+      logo: images/电商工具/GreatBoss_ERP.png
+      url: http://greatboss.com
+      description: TikTok美国本土店铺精细化运营ERP
+    - title: 蓝鲸BI
+      logo: images/电商工具/蓝鲸BI.png
+      url: https://www.lingdongsz.com
+      description: 美客多一站式选品，运营软件工具
+  - name: 跨境平台
+    links:
+    - title: TikTok
+      logo: images/电商工具/Tiktok.jpg
+      url: https://www.tiktok.com/
+      description: TikTok是全球最受欢迎的短视频应用
+    - title: Amazon
+      logo: images/电商工具/亚马逊.png
+      url: https://www.amazon.com/
+      description: 美国跨国电子商务企业 亚马逊
+    - title: TEMU
+      logo: images/电商工具/TEMU.png
+      url: https://www.temu.com/
+      description: 中国最大的跨境电商平台
+    - title: Aliexpress-速卖通
+      logo: images/电商工具/Aliexpress_速卖通.png
+      url: https://www.aliexpress.com/
+      description: 中国最大的跨境出口B2C平台
+    - title: eBay
+      logo: images/电商工具/eBay.png
+      url: https://www.ebay.com/
+      description: 美国线上拍卖及购物网站
+    - title: 阿里巴巴国际
+      logo: images/电商工具/阿里巴巴国际.png
+      url: https://supplier.alibaba.com/
+      description: 全球领先的跨境贸易B2B电子商务平台
+    - title: Shopee
+      logo: images/电商工具/Shopee.png
+      url: https://shopee.com/
+      description: 东南亚与台湾电商平台
+    - title: Lazada
+      logo: images/电商工具/Lazada.png
+      url: https://www.lazada.com/en/
+      description: 东南亚地区最大的在线购物网站之一
+    - title: Etsy
+      logo: images/电商工具/Etsy.png
+      url: https://www.etsy.com/
+      description: 世界上最具活力的手工艺品交易网
+    - title: Wayfair
+      logo: images/电商工具/Wayfair.png
+      url: https://www.wayfair.com/
+      description: Wayfair美国，主要销售家具和家居用品。
+    - title: Flipkart
+      logo: images/电商工具/Flipkart.png
+      url: https://www.flipkart.com/
+      description: 印度最大电商平台
+    - title: 日本乐天
+      logo: images/电商工具/日本乐天.png
+      url: https://www.rakuten.co.jp/
+      description: 日本数一数二的电商平台
+    - title: Coupang
+      logo: images/电商工具/Coupang.png
+      url: https://www.coupang.com/
+      description: 韩国最大的电商平台
+    - title: Gmarket
+      logo: images/电商工具/Gmarket.png
+      url: https://www.gmarket.co.kr/
+      description: 韩国综合购物网站，eBay旗下
+    - title: 敦煌网
+      logo: images/电商工具/敦煌网.jpg
+      url: https://www.dhgate.com/
+      description: 领先的在线外贸交易平台
+    - title: TradeMe
+      logo: images/电商工具/TradeMe.jpg
+      url: https://www.trademe.co.nz/
+      description: 新西兰最大的电商网站
+    - title: Catch
+      logo: images/电商工具/Catch.png
+      url: https://www.catch.com.au/
+      description: 澳大利亚最大的在线零售商之一
+    - title: Myntra
+      logo: images/电商工具/Myntra.jpg
+      url: https://www.myntra.com/
+      description: 印度最大的时尚电商平台
+    - title: Noon
+      logo: images/电商工具/Noon.png
+      url: https://www.noon.com/uae-en/
+      description: 中东物流时效较快的平台
+    - title: Fordeal
+      logo: images/电商工具/Fordeal.png
+      url: https://www.fordeal.com/en-AE/
+      description: 中东领先的电商平台
+    - title: Chewy
+      logo: images/电商工具/Chewy.png
+      url: https://www.chewy.com/
+      description: 美国最大的宠物电商网站
+    - title: Poshmark
+      logo: images/电商工具/Poshmark.png
+      url: https://poshmark.com/
+      description: 美国版“闲鱼”
+    - title: 日本雅虎购物
+      logo: images/电商工具/日本雅虎购物.png
+      url: https://shopping.yahoo.co.jp/
+      description: 日本知名购物平台
+  - name: 企业查询
+    links:
+    - title: 企业信用信息公示系统
+      logo: images/电商工具/企业信用信息公示系统.jpeg
+      url: https://shiming.gsxt.gov.cn
+      description: 企业信用信息公示系统
+    - title: 风鸟
+      logo: images/电商工具/风鸟.jpeg
+      url: https://riskbird.com/#/?inviteCode=7607D07920E3AD43
+      description: 企业查询，注册送5年SVIP
+    - title: 天眼查
+      logo: images/电商工具/天眼查.jpeg
+      url: https://www.tianyancha.com
+      description: 天眼查企业查询
+    - title: 企查查
+      logo: images/电商工具/企查查.jpeg
+      url: https://www.qichacha.com
+      description: 企查查企业查询
+    - title: 爱企查
+      logo: images/电商工具/爱企查.jpeg
+      url: https://aiqicha.baidu.com
+      description: 爱企查企业查询
+    - title: 企知道
+      logo: images/电商工具/企知道.png
+      url: https://qiye.qizhidao.com
+      description: 企知道企业查询
+  - name: 知识产权
+    links:
+    - title: 抖音知识产权保护
+      logo: images/电商工具/抖音.jpg
+      url: https://ippro.bytedance.com
+      description: 抖音电商原创保护平台
+    - title: 淘宝原创保护
+      logo: images/电商工具/淘宝.png
+      url: https://yc.alibaba.com
+      description: 淘宝原创保护平台
+    - title: 淘宝知识产权保护
+      logo: images/电商工具/淘宝.png
+      url: https://ipp.taobao.com/home.htm#/login
+      description: 淘宝知识产权保护平台
+    - title: 京东知识产权保护
+      logo: images/电商工具/京东.png
+      url: https://jdgroupip.com
+      description: 京东知识产权保护平台
+    - title: 快手知识产权保护
+      logo: images/电商工具/快手.jpg
+      url: https://ipp.kuaishou.com
+      description: 快手电商原创保护平台
+    - title: 小红书权利人保护
+      logo: images/电商工具/小红书.jpg
+      url: https://ipp.xiaohongshu.com/login
+      description: 小红书电商原创保护平台
+    - title: 拼多多知识产权保护
+      logo: images/电商工具/拼多多.jpg
+      url: https://ipp.pinduoduo.com
+      description: 拼多多原创保护平台
+
+- taxonomy: 联系我们
+  icon: fa-envelope
+  links:
+  - title: 微信公众号
+    logo: images/联系我们/公众号.png
+    url: https://cdn.nodeimage.com
+  - title: 抖音客服
+    logo: images/联系我们/douyin.jpg
+    url: https://v.douyin.com
+  - title: 飞书客服
+    logo: images/联系我们/feishu.png
+    url: https://cdn.nodeimage.com
+  - title: Github
+    logo: images/联系我们/github.jpg
+    url: https://github.com/TLS-802
+
+- taxonomy: 友情链接
+  icon: fa-handshake
+  friend:
+  - title: 微信公众号
+    url: https://cdn.nodeimage.com
