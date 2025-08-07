@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <img src="/static/images/TLS-logo.png" alt="驼铃电商导航" width="200" />
+  <img src="/static/images/tlsnav.png" alt="驼铃电商导航" width="200" />
   
   [![Hugo](https://img.shields.io/badge/Hugo-0.128.0+-blue.svg)](https://gohugo.io/)
   [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
