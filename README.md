@@ -114,7 +114,7 @@ TLS-Nav/
 
 ### 部署步骤
 
-1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+1. 登录 [Cloudflare](https://dash.cloudflare.com/)
 2. 进入 **Pages** 服务
 3. 点击 **"创建项目"**
 4. 选择 **"连接到 Git"** 并授权访问你的代码仓库
